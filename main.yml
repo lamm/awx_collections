@@ -1,0 +1,16 @@
+---
+- name: Build and deploy AWX
+  hosts: all
+
+  tasks:
+  - name: Create compute resources
+    theforeman.foreman.compute_resource:
+      server_url: https://foreman.example.com
+      username: admin
+      password: changeme
+      validate_certs: yes
+      name: "test"
+      organizations: "myorga"
+      locations: "mylocation"
+      description: "mydescription"
+      provider: "ldldldlld"
